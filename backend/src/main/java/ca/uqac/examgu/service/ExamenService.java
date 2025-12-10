@@ -140,7 +140,8 @@ public class ExamenService {
     public List<Examen> lister() {
         return examenRepository.findAll();
     }
-    public List<Examen> listerExamenEnseignant(Enseignant enseignant){return examenRepository.findByCreateur_Id(enseignant.getId());}
+    public List<Examen> listerExamenEnseignant(Enseignant enseignant){return examenRepository.findAll()
+            .stream().filter(examen -> examen.getCreateur().getId().equals(enseignant.getId())).toList();}
 
     public List<Examen> listerExamenEtudiant(Etudiant etudiant){return examenRepository.findAll()
             .stream().filter(examen -> examen.estInscrit(etudiant)).toList();}
