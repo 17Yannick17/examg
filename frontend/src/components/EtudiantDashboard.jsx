@@ -603,16 +603,7 @@ const EtudiantDashboard = () => {
             <span>Examens disponibles</span>
           </button>
           
-          <button 
-            className={activeTab === 'resultats' ? 'tab active' : 'tab'}
-            onClick={() => {
-              setActiveTab('resultats');
-              chargerResultats();
-            }}
-          >
-            <Icon type="trophy" />
-            <span>Mes résultats</span>
-          </button>
+          
         </div>
       )}
 

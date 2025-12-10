@@ -293,8 +293,7 @@ public class ExamenService {
                     try {
                         reponse.corrigerAutomatiquement();
                         qcmCorriges++;
-                    } catch (Exception e) {
-                        // Ignorer les erreurs pour cette correction
+                    } catch (Exception ignored) {
                     }
                 }
             }
