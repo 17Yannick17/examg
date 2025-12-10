@@ -13,4 +13,6 @@ public interface ExamenRepository extends JpaRepository<Examen, UUID> {
     Optional<Examen> findById(UUID examenId);
 
     List<Examen> findByCreateur(Enseignant enseignant);
+
+    List<Examen> findByCreateur_Id(UUID id);
 }
